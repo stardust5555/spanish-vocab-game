@@ -5,6 +5,10 @@ function App() {
 //Creating our state object so that we can move onto subsequent questions
 const [currentQuestion, setCurrentQuestion] = useState(0)
 
+//Creating our state object that will display the score when the final answer button is clicked
+const [showScore, setShowScore] = useState(false)
+
+
 //Our array of questions
   const questions = [
 		{
@@ -45,21 +49,32 @@ const handleAnswerButtonClick = function (){
 	if (nextQuestion < questions.length){
 		return setCurrentQuestion(nextQuestion)
 	} else {
-		console.log("You've reached the end of the quiz!")
+		setShowScore(true);
 	}
 	
 }
 
   return (
     <div className="App">
-      <h1>Question {currentQuestion +1}/{questions.length}</h1>
-	  <h2>{questions[currentQuestion].questionText}</h2>
 
-	  {/* Mapping through answers to the questions, so that they are displayed inside each button */}
-	  <h2>
-		{questions[currentQuestion].answerOptions.map(function(answerOption){
-		return <button onClick = {handleAnswerButtonClick}>{answerOption.answerText}</button>})}
-	</h2>
+		{/*This displays the user's score when they've finished the quiz */}
+		{showScore ? (
+		<div className = "scoreBoard">
+			<h1> You've scored ? out of {questions.length}</h1>
+		</div>
+		):(
+		<div className = "Questions">
+			{/* This display which question number you're on*/}
+			<h1>Pregunta {currentQuestion +1}/{questions.length}</h1>
+			{/*This displays the question */}
+			<h2>{questions[currentQuestion].questionText}</h2>
+			{/* Mapping through answers to the questions, so that they are displayed inside each button */}
+			<h2>
+				{questions[currentQuestion].answerOptions.map(function(answerOption){
+				return <button onClick = {handleAnswerButtonClick}>{answerOption.answerText}</button>})}
+			</h2>
+		</div>
+		)}
     </div>
   );
 }
