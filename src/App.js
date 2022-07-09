@@ -39,7 +39,15 @@ const [currentQuestion, setCurrentQuestion] = useState(0)
 
 //Creating our handleClick function so that the question moves to the next question when an answer button is clicked
 const handleAnswerButtonClick = function (){
-	return setCurrentQuestion(currentQuestion+1)
+	const nextQuestion = currentQuestion +1
+
+	//Display the score when the final answer button is clicked
+	if (nextQuestion < questions.length){
+		return setCurrentQuestion(nextQuestion)
+	} else {
+		console.log("You've reached the end of the quiz!")
+	}
+	
 }
 
   return (

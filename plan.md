@@ -36,3 +36,12 @@ To do this we need to use useState. We want our code to be able to remember whic
 
 - Change the h1 that contains the question number inside it so that it changes as the next question is clicked
     -i.e. Question 1 becomes Question {currentQuestion +1}
+
+## STEP 3 - Displaying the user's score when they have finished the quiz
+Currently, when the user reaches the end of the quiz, the screen goes blank. This is because every time we click an answer button we go to the next question in the array. However, when we click the final answer button, we tell the code to go to the next question in the array but it doesn't exist!
+
+So we need to create an if else statement, so that when the final answer button is clicked we display something else i.e. the user's score.
+In our handlClick function
+    - Create an if else statement that says
+    - If nextQuestion < questions.length, then we display the next question
+    - else display the score 
