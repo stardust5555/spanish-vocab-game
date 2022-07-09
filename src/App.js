@@ -6,8 +6,10 @@ function App() {
 const [currentQuestion, setCurrentQuestion] = useState(0)
 
 //Creating our state object that will display the score when the final answer button is clicked
-const [showScore, setShowScore] = useState(false)
+const [scoreBoard, setScoreBoard] = useState(false)
 
+//Creating our state object that remember the user's score as they answer the questions
+const [userScore, setUserScore] = useState(0)
 
 //Our array of questions
   const questions = [
@@ -24,8 +26,8 @@ const [showScore, setShowScore] = useState(false)
 			questionText: 'Por favour. ¡Necessito leche!',
 			answerOptions: [
 				{ answerText: '🍉', isCorrect: false },
-				{ answerText: '🍞', isCorrect: true },
-				{ answerText: '🥛', isCorrect: false },
+				{ answerText: '🍞', isCorrect: false },
+				{ answerText: '🥛', isCorrect: true },
 				{ answerText: '🍖', isCorrect: false },
 			],
 		},
@@ -42,14 +44,22 @@ const [showScore, setShowScore] = useState(false)
 	
 
 //Creating our handleClick function so that the question moves to the next question when an answer button is clicked
-const handleAnswerButtonClick = function (){
+const handleAnswerButtonClick = function (userAnswer){
+	//Logic that allows the user to move to the next question
 	const nextQuestion = currentQuestion +1
+
+	//Logc that adds one to the user's score if they click the correct answer
+	if(userAnswer === true){
+		console.log(userScore)
+		setUserScore(userScore + 1);
+		console.log(userScore)
+	}
 
 	//Display the score when the final answer button is clicked
 	if (nextQuestion < questions.length){
 		return setCurrentQuestion(nextQuestion)
 	} else {
-		setShowScore(true);
+		setScoreBoard(true);
 	}
 	
 }
@@ -58,9 +68,9 @@ const handleAnswerButtonClick = function (){
     <div className="App">
 
 		{/*This displays the user's score when they've finished the quiz */}
-		{showScore ? (
+		{scoreBoard ? (
 		<div className = "scoreBoard">
-			<h1> You've scored ? out of {questions.length}</h1>
+			<h1> You've scored {userScore} out of {questions.length}</h1>
 		</div>
 		):(
 		<div className = "Questions">
@@ -71,7 +81,7 @@ const handleAnswerButtonClick = function (){
 			{/* Mapping through answers to the questions, so that they are displayed inside each button */}
 			<h2>
 				{questions[currentQuestion].answerOptions.map(function(answerOption){
-				return <button onClick = {handleAnswerButtonClick}>{answerOption.answerText}</button>})}
+				return <button onClick = {function(){handleAnswerButtonClick(answerOption.isCorrect)}}>{answerOption.answerText}</button>})}
 			</h2>
 		</div>
 		)}

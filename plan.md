@@ -60,3 +60,26 @@ Displaying the user's score
     - Create a ternary around the separate divs.
     - When showScore = true, then we want to display the scoreBoard
     - When showScore = false, then we want to display the questions
+
+## STEP 4 - Saving the score
+We want to be able to save the user's score as they complete the quiz and then display it in the scoreboard at the end of the quiz.
+
+
+
+- Creating another state object. (We start by creating a state object that will save their score over the course of the quiz)
+    - i.e. [score, setScore] = useState(0)
+    - We want the user's score to be zero initially as they don't have any points when they start the quiz
+
+- Adding logic to handleAnswerButtonClick. We need to add some more logic to our handleAnswerButtonClick function to say that when the user's answer is true, we want to add point to their score.
+    i.e. where we render our button, in the handleClick we want to be able to map over every answer and determine if isCorrect = true. If it is true, then inside our handleClick function we want to create some logic that adds one to the score. Let's take the first bit first
+    - Mapping over every answer 
+        onClick = {handleAnswerButtonClick(answerOption.isCorrect)}
+    - However, now that we've got smooth brackets after our function, it's going to run the function immediately. So we need to wrap it inside an empty function.
+        onClick = {function(){handleAnswerButtonClick(answerOption.isCorrect)}}
+    - Creating the logic in our handleClick function
+        - We want the handleClick to take in a parameter 
+            i.e.const handleAnswerButtonClick = function (userAnswer)
+        - Now we want to say that when the userAnswer is true, add one to the user's score.
+    - Display the user's score in the scoreBoard section of the return in the App function
+        i.e. <h1> You've scored {userScore} out of {questions.length}</h1>
+         
