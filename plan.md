@@ -5,7 +5,7 @@
 - Clean up index.js
 - Push these changes up to the main branch on GitHub
 
-# PHASE 1
+# PHASE 1 - Creating an MVP of a simple quiz (all code in App.js)
 We want to create an MVP which is essentially just the quiz. 
 To do this we're going to set up everything in index.js. 
 Later we will move the data into separate files and components, but let's keep it simple for now.
@@ -64,8 +64,6 @@ Displaying the user's score
 ## STEP 4 - Saving the score
 We want to be able to save the user's score as they complete the quiz and then display it in the scoreboard at the end of the quiz.
 
-
-
 - Creating another state object. (We start by creating a state object that will save their score over the course of the quiz)
     - i.e. [score, setScore] = useState(0)
     - We want the user's score to be zero initially as they don't have any points when they start the quiz
@@ -81,5 +79,11 @@ We want to be able to save the user's score as they complete the quiz and then d
             i.e.const handleAnswerButtonClick = function (userAnswer)
         - Now we want to say that when the userAnswer is true, add one to the user's score.
     - Display the user's score in the scoreBoard section of the return in the App function
-        i.e. <h1> You've scored {userScore} out of {questions.length}</h1>
+        
+        i.e. ``` <h1> You've scored {userScore} out of {questions.length} </h1>```
          
+
+# PHASE 2 - Moving everything into separate folders
+Remeber to import and export everything!
+
+1. Moving the questions array into libs folder
