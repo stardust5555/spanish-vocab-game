@@ -1,7 +1,11 @@
+import {useState} from "react"
 import './App.css';
 
 function App() {
+//Creating our state object so that we can move onto subsequent questions
+const [currentQuestion, setCurrentQuestion] = useState(0)
 
+//Our array of questions
   const questions = [
 		{
 			questionText: 'Quiero una manzana',
@@ -31,14 +35,22 @@ function App() {
 			],
 		},
 	];
+	
+
+//Creating our handleClick function so that the question moves to the next question when an answer button is clicked
+const handleAnswerButtonClick = function (){
+	return setCurrentQuestion(currentQuestion+1)
+}
 
   return (
     <div className="App">
-      <h1>Question 1/{questions.length}</h1>
-	  <h2>{questions[0].questionText}</h2>
+      <h1>Question {currentQuestion +1}/{questions.length}</h1>
+	  <h2>{questions[currentQuestion].questionText}</h2>
+
+	  {/* Mapping through answers to the questions, so that they are displayed inside each button */}
 	  <h2>
-		{questions[0].answerOptions.map(function(answerOption){
-		return <button>{answerOption.answerText}</button>})}
+		{questions[currentQuestion].answerOptions.map(function(answerOption){
+		return <button onClick = {handleAnswerButtonClick}>{answerOption.answerText}</button>})}
 	</h2>
     </div>
   );
