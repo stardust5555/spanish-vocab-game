@@ -34,7 +34,12 @@ function App() {
 
   return (
     <div className="App">
-      
+      <h1>Question 1/{questions.length}</h1>
+	  <h2>{questions[0].questionText}</h2>
+	  <h2>
+		{questions[0].answerOptions.map(function(answerOption){
+		return <button>{answerOption.answerText}</button>})}
+	</h2>
     </div>
   );
 }
