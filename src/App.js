@@ -2,8 +2,8 @@ import {useState} from "react"
 import './App.css';
 
 import {questions} from "./libs/questions"
-import ScoreBoard from "./components/scoreBoard";
-import SpeechBubble from "./components/speechBubble";
+import ScoreBoard from "./components/ScoreBoard";
+import SpeechBubble from "./components/SpeechBubble";
 
 function App() {
 // || STATE OBJECTS
@@ -43,14 +43,12 @@ const handleAnswerButtonClick = function (userAnswer){
     <div className="App">
 		{/*This displays the user's score when they've finished the quiz */}
 		{scoreBoard ? (
-		<div className = "scoreBoard">
-			<ScoreBoard userScore = {userScore} numberOfQuestions={questions.length}/>
-		</div>
+			<ScoreBoard className="scoreBoard" userScore = {userScore} numberOfQuestions={questions.length}/>
 		):(
 		<div className = "questions">
 			{/* This display which question number you're on*/}
 			<h1>Pregunta {currentQuestion +1}/{questions.length}</h1>
-			{/*This displays the question */}
+			{/*This displays the question text */}
 			<SpeechBubble speechBubbleText={questions[currentQuestion].questionText}/>
 			{/* Mapping through answers to the questions, so that they are displayed inside each button */}
 			<h2>
