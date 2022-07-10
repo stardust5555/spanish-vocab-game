@@ -3,6 +3,7 @@ import './App.css';
 
 import {questions} from "./libs/questions"
 import ScoreBoard from "./components/scoreBoard";
+import SpeechBubble from "./components/speechBubble";
 
 function App() {
 // || STATE OBJECTS
@@ -50,10 +51,7 @@ const handleAnswerButtonClick = function (userAnswer){
 			{/* This display which question number you're on*/}
 			<h1>Pregunta {currentQuestion +1}/{questions.length}</h1>
 			{/*This displays the question */}
-			<div className = "questionText">
-				<h3>{questions[currentQuestion].questionText}</h3>
-			</div>
-			<span className="speechBubbleTail"></span>
+			<SpeechBubble speechBubbleText={questions[currentQuestion].questionText}/>
 			{/* Mapping through answers to the questions, so that they are displayed inside each button */}
 			<h2>
 				{questions[currentQuestion].answerOptions.map(function(answerOption){

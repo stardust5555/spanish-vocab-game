@@ -5,7 +5,6 @@
     background-position: center;
 } */
 
-
 .questions{
     display: flex;
     justify-content: center;
@@ -35,3 +34,26 @@
     border-left: 100px solid antiquewhite;
     border-bottom: 50px solid transparent;
   } */
+
+/*SpeechBubble*/
+
+.bubble {
+	position: relative;
+	background-color: antiquewhite;
+	border-radius: .4em;
+}
+
+.bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 0.625em solid transparent;
+	border-top-color: antiquewhite;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -0.312em;
+	margin-bottom: -0.625em;
+}
