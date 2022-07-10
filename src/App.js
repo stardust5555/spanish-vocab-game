@@ -43,15 +43,15 @@ const handleAnswerButtonClick = function (userAnswer){
     <div className="App">
 		{/*This displays the user's score when they've finished the quiz */}
 		{scoreBoard ? (
-			<ScoreBoard className="scoreBoard" userScore = {userScore} numberOfQuestions={questions.length}/>
+			<ScoreBoard userScore = {userScore} numberOfQuestions={questions.length}/>
 		):(
 		<div className = "questions">
 			{/* This display which question number you're on*/}
-			<h1>Pregunta {currentQuestion +1}/{questions.length}</h1>
+			<h1 className ="questionNumber">Pregunta {currentQuestion +1}/{questions.length}</h1>
 			{/*This displays the question text */}
-			<SpeechBubble speechBubbleText={questions[currentQuestion].questionText}/>
+			<SpeechBubble  speechBubbleText={questions[currentQuestion].questionText}/>
 			{/* Mapping through answers to the questions, so that they are displayed inside each button */}
-			<h2>
+			<h2 className ="answerButtons">
 				{questions[currentQuestion].answerOptions.map(function(answerOption){
 				return <button onClick = {function(){handleAnswerButtonClick(answerOption.isCorrect)}}>{answerOption.answerText}</button>})}
 			</h2>

@@ -87,3 +87,7 @@ We want to be able to save the user's score as they complete the quiz and then d
 Remeber to import and export everything!
 
 1. Moving the questions array into libs folder
+2. Create different components for the Speech Bubble etc
+
+
+# PHASE 3 - Creating a database
