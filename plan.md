@@ -84,10 +84,65 @@ We want to be able to save the user's score as they complete the quiz and then d
          
 
 # PHASE 2 - Moving everything into separate folders
-Remeber to import and export everything!
+Remember to import and export everything!
 
 1. Moving the questions array into libs folder
 2. Create different components for the Speech Bubble etc
 
 
 # PHASE 3 - Creating a database
+## Heroku
+1. Create a new app
+2. Resources --> add ons --> heroku postgres
+3. Click on it to get our environment variables
+
+## .env file
+1. Create a .env file
+2. Add it to gitignore
+3. Put in our database credentials
+
+## Install node-postgres and dotenv
+1. npm i pg
+2. npm install --save-dev dotenv
+3. Add "dev": "nodemon -r -dotenv/config app.js" to the "scripts" section of the package.json
+
+## Setting up our pool
+1. Create an index.js file in the db folder
+2. import pg
+3. Create our pool
+    - Use dot notation to create a new pg.pool
+    - This should contain an object with all of our env variables
+    - ssl: {rejectUnauthorised:false}
+    - Set this all equal to a variable called "pool"
+    - export the pool
+4. Create a query function
+  - create a function called query which has three parameters:text, params, callback
+  - return pool.query(text,params,callback)
+
+
+
+# PHASE 4 - Creating and populating our tables
+## Creating our tables
+1. Import our query from "index.js"
+2. Set up our SQL string
+3. Query the database
+  - create an async function caled createTable
+  - query our SQL string
+  - store the query inside a variable
+  - await our query
+  - console log to make sure the function has run
+  - Run the function
+4. Add a shortcut to package.json i.e. "db:createTable":"node -r dotenv/config ./db/scripts/createTable.js",
+
+## Populating our table
+1. Import our query from "index.js"
+2. Import our cats data
+3. Set up a for loop which queries the database  
+  - create an async function called populateTable
+  - create a or loop
+  - query our SQL string (which contains INSERT INTO, VALUES)
+  - store the query inside a variable (called "result)
+  - await our query
+  - console log our result.rows
+  - Run the function
+4. Add shortcut to package.json i.e. "db:populateTable":"node -r dotenv/config ./db/scripts/populateTable.js",
