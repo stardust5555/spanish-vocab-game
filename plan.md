@@ -136,7 +136,7 @@ Remember to import and export everything!
 
 ## Populating our table
 1. Import our query from "index.js"
-2. Import our cats data
+2. Import our data from libs
 3. Set up a for loop which queries the database  
   - create an async function called populateTable
   - create a or loop
