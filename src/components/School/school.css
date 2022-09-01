@@ -1,0 +1,9 @@
+.School{
+    background-image:url("school.jpg");
+    background-size: cover;
+    height: 610px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    height:98vh;
+}

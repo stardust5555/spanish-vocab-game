@@ -1,0 +1,8 @@
+.ClothesShop{
+    background-image:url("clothesShop.jpg");
+    background-size: cover;
+    height: 610px;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+}

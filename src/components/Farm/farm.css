@@ -1,0 +1,9 @@
+.Farm{
+    background-image:url("farm.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+    background-size: cover;
+    height:98vh;
+}

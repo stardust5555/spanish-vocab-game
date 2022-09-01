@@ -1,0 +1,74 @@
+.Supermarket{
+    background-image:url("supermarketBackground.jpg");
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    height:98vh;
+}
+
+.scoreBoard{
+    padding-top:7%;
+    font-size: 50px;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
+.questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.questionNumber{
+    font-size: 50px;
+    position:relative;
+    padding-top:5%;
+}
+
+.answerButtons{
+    flex-direction: column;
+    justify-content:space-between;
+    position: relative;
+    padding-top:6%;
+    display: inline-flex;
+    vertical-align: middle;
+
+}
+
+
+
+
+
+
+.bubble {
+    padding:1%;
+	position: relative;
+	background-color: white;
+	border-radius: .4em;
+    transform:translate(-50%, -10%);
+}
+
+.bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 0.625em solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -4em;
+	margin-bottom: -0.625em;
+}
