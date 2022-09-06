@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "nodemon -r -dotenv/config app.js"
   },
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.1",
+    "enzyme": "^3.11.0",
     "jest": "^27.5.1"
   }
 }
