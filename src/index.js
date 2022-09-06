@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Map from './map';
+import App from './App/App'
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
@@ -16,7 +16,7 @@ root.render(
         <>
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<Map/>}></Route>
+            <Route path="/" element={<App/>}></Route>
                 <Route path="/supermarket" element={<Supermarket/>}></Route>
                 <Route path="/clothesShop" element={<ClothesShop/>}></Route>
                 <Route path="/farm" element={<Farm/>}></Route>
