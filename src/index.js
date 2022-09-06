@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App/App'
 
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
+import App from './App/App'
 import Supermarket from "./components/Supermarket/supermarket"
 import ClothesShop from "./components/ClothesShop/clothesShop"
 import Farm from "./components/Farm/farm"
