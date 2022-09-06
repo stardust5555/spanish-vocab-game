@@ -3,19 +3,19 @@ export const questions = [
     {
         questionText: 'Quiero una manzana',
         answerOptions: [
-            { answerText: '🍇', isCorrect: false },
-            { answerText: '🍌', isCorrect: false },
-            { answerText: '🍎', isCorrect: true },
-            { answerText: '🍐', isCorrect: false },
+            { answerText: ' grapes 🍇', isCorrect: false },
+            { answerText: 'banana 🍌', isCorrect: false },
+            { answerText: 'apple 🍎', isCorrect: true },
+            { answerText: 'pear 🍐', isCorrect: false },
         ],
     },
     {
         questionText: 'Por favour. ¡Necessito leche!',
         answerOptions: [
-            { answerText: '🍉', isCorrect: false },
-            { answerText: '🍞', isCorrect: false },
-            { answerText: '🥛', isCorrect: true },
-            { answerText: '🍖', isCorrect: false },
+            { answerText: 'watermelon 🍉', isCorrect: false },
+            { answerText: 'bread 🍞', isCorrect: false },
+            { answerText: 'milk 🥛', isCorrect: true },
+            { answerText: 'meat 🍖', isCorrect: false },
         ],
     },
     {

@@ -1,11 +1,5 @@
 import "./map.css"
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
-
-import Supermarket from "./components/Supermarket/supermarket"
-import ClothesShop from "./components/ClothesShop/clothesShop"
-import Farm from "./components/Farm/farm"
-import School from "./components/School/school"
-
+import { Link } from "react-router-dom"
 
 export default function Map(){
     return(
