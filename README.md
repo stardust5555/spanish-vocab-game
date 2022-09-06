@@ -3,6 +3,8 @@ Hi! This is my Spanish vocab game! (Or at least it will be 😅)
 
 It's a work in progress at the moment, but eventually it will become an interactive quiz to test you on your GCSE Spanish vocab!
 
+I've been trying to implement <b><i>CI/CD</i></b>. So even though it's not yet complete here's a link to my website: [https://spanish-vocab-game.netlify.app/ 
+](https://spanish-vocab-game.netlify.app/)
 ## Run locally
 First clone done the repo
 ```
@@ -22,7 +24,6 @@ npm start
 - Making it more accessible
 
 ## Further Sprints
-- Deployment
 - End to end Cypress testing
 - Setting up a database for the quiz questions
 
