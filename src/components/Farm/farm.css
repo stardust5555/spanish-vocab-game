@@ -1,9 +1,67 @@
-.Farm{
-    background-image:url("farm.jpg");
-    background-repeat: no-repeat;
-    text-align: center;
-    margin: 0;
-    overflow: hidden;
-    background-size: cover;
-    height:98vh;
+.farmBackground{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
 }
+
+
+.farmContent{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    background-color: rgb(174, 235, 233);
+    margin-left:auto;
+    margin-right:auto;
+    width:45%;
+    height: min-content;
+    margin-top:10%;
+    padding:2%;
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0rem  rgba(0, 0, 0, 0.75);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.questionNumber{
+    font-size: 150%;
+    font-weight: 400;
+    padding-bottom: 10%;
+}
+
+.questionText{
+    font-size: 170%;
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
+.answerbuttons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Farm button{
+    width: 100%;
+    font-size: 1.2rem;
+    background-color:rgb(193, 237, 235);
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    border:solid rgb(149, 210, 208);
+    cursor: pointer;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Farm button:hover{
+    background-color: rgb(138, 214, 212);
+}
+
+.homeButton {
+    text-decoration: none;
+    position:absolute;
+    top:2%;
+    left:auto;
+  }

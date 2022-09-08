@@ -7,8 +7,7 @@
     z-index: -1;
 }
 
-
-.content{
+.supermarketContent{
     display: flex;
     justify-content:center;
     text-align: center;
@@ -37,13 +36,13 @@
     padding-bottom: 5%;
 }
 
-.answerbuttons{
+.answerButtons{
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-button{
+.Supermarket button{
     width: 100%;
     font-size: 1rem;
     background-color: blanchedalmond;
@@ -56,7 +55,7 @@ button{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-button:hover{
+.Supermarket button:hover{
     background-color: rgb(223, 206, 180);
 }
 

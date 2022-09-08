@@ -3,7 +3,7 @@ import './supermarket.css';
 import { Link } from "react-router-dom"
 import {useState} from "react"
 
-import {questions} from "../../libs/questions"
+import {questions} from "../../libs/supermarketQuestions"
 
 export default function Supermarket(){
 // || STATE OBJECTS
@@ -44,7 +44,7 @@ const handleAnswerButtonClick = function (userAnswer){
 			</Link>
 
 			<img class="supermarketBackground" src={ require('./supermarketBackground.jpg') } alt="supermarket background"/>
-			<div className="content">
+			<div className="supermarketContent">
 				{/*This displays the user's score when they've finished the quiz */}
 				{scoreBoard ? (
 					<h1>You've scored {userScore} out of {questions.length}</h1>
