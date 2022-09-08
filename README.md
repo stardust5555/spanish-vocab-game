@@ -31,3 +31,5 @@ npm start
 - This project started as a way to familiarise myself with React, in particular state and hooks. 
 - I've learnt how to use React Router to route to different pages
 - The importance of commenting code! 😆 Having come back to this project after 2 months. I'm really glad that I took the time at the beginning to comment everything that I did. It's made it so much easier to come back and understand where I left off
+- Since the bootcamp has ended I've decided to implement CI/CD 
+- Testing! I've decided to use this project to really sharpen my testing skills using Jest and Cypress
