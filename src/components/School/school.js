@@ -7,7 +7,7 @@ export default function School(){
         <div className="School">
         <h1>School</h1>
         <Link to="/">
-        <button>Back to Map</button>
+        <button id="homepage">Back to Map</button>
         </Link>
         </div>
     )
