@@ -3,7 +3,7 @@ import './supermarket.css';
 import { Link } from "react-router-dom"
 import {useState} from "react"
 
-import {questions} from "../../libs/questions"
+import {questions} from "../../libs/supermarketQuestions"
 
 export default function Supermarket(){
 // || STATE OBJECTS
@@ -39,8 +39,12 @@ const handleAnswerButtonClick = function (userAnswer){
     return(
 		
         <div className="Supermarket">
+			<Link className="homeButton" to="/">
+				<button id="homepage"> ⬅️ Back to Map </button>
+			</Link>
+
 			<img class="supermarketBackground" src={ require('./supermarketBackground.jpg') } alt="supermarket background"/>
-			<div className="content">
+			<div className="supermarketContent">
 				{/*This displays the user's score when they've finished the quiz */}
 				{scoreBoard ? (
 					<h1>You've scored {userScore} out of {questions.length}</h1>
@@ -49,7 +53,7 @@ const handleAnswerButtonClick = function (userAnswer){
 					{/* This display which question number you're on*/}
 					<h1 className ="questionNumber">Pregunta {currentQuestion +1}/{questions.length}</h1>
 					{/*This displays the question text */}
-					<h1>{questions[currentQuestion].questionText}</h1>
+					<h1 className ="questionText">{questions[currentQuestion].questionText}</h1>
 					{/* Mapping through the different answers to the questions, so that they are displayed inside each button */}
 					<div className ="answerButtons">
 						{questions[currentQuestion].answerOptions.map(function(answerOption){
@@ -59,9 +63,7 @@ const handleAnswerButtonClick = function (userAnswer){
 				)}
 
 			</div>
-			<Link to="/">
-				<button> ⬅️ Back to Map </button>
-			</Link>
+			
 
         </div>
     )
