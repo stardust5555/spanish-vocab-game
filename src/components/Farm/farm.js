@@ -7,7 +7,7 @@ export default function Farm(){
         <div className="Farm">
         <h1>Farm</h1>
         <Link to="/">
-        <button>Back to Map</button>
+        <button id="homepage">Back to Map</button>
         </Link>
         </div>
     )
