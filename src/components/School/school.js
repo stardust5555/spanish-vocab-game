@@ -7,7 +7,7 @@ import {questions} from "../../libs/schoolQuestions"
 
 export default function School(){
 // || STATE OBJECTS
-//Creating our state object so that we can move onto subsequent questions
+//Creating our state object so that we can move onto subsequent questions.
 const [currentQuestion, setCurrentQuestion] = useState(0)
 
 //Creating our state object that will display the score when the final answer button is clicked
