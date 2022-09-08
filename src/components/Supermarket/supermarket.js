@@ -60,7 +60,7 @@ const handleAnswerButtonClick = function (userAnswer){
 
 			</div>
 			<Link to="/">
-				<button> ⬅️ Back to Map </button>
+				<button id="homepage"> ⬅️ Back to Map </button>
 			</Link>
 
         </div>
