@@ -1,8 +1,68 @@
-.ClothesShop{
-    background-image:url("clothesShop.jpg");
-    background-size: cover;
-    height: 610px;
-    text-align: center;
-    margin: 0 auto;
-    overflow: hidden;
+.clothesShopBackground{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
 }
+
+
+.ClothesShopContent{
+    display: flex;
+    justify-content:center;
+    text-align: center;
+    background-color: rgb(253, 204, 213);
+    margin-left:auto;
+    margin-right:auto;
+    width:45%;
+    height: min-content;
+    margin-top:10%;
+    padding:2%;
+    border-radius: 0.5rem;
+    /* border:solid rgb(222, 173, 99); */
+    box-shadow: 0.5rem 0.5rem 0.5rem 0rem  rgba(0, 0, 0, 0.75);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.questionNumber{
+    font-size: 150%;
+    font-weight: 400;
+    padding-bottom: 10%;
+}
+
+.questionText{
+    font-size: 170%;
+    font-weight: 600;
+    padding-bottom: 5%;
+}
+
+.answerbuttons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ClothesShop button{
+    width: 100%;
+    font-size: 1.2rem;
+    background-color:rgb(251, 219, 225);
+    border-radius: 0.5rem;
+    display: flex;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    border:solid rgb(253, 171, 171);
+    cursor: pointer;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ClothesShop button:hover{
+    background-color: rgb(245, 179, 191);
+}
+
+.homeButton {
+    text-decoration: none;
+    position:absolute;
+    top:2%;
+    left:auto;
+  }

@@ -6,6 +6,12 @@
     left:0
 }
 
+.banner{
+    top:7%;
+    left:31%;
+    position:absolute;
+    width:40%;
+}
 
 .barn{
     top:60%;
